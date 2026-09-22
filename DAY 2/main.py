@@ -3,6 +3,9 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to my FastAPI application!"}
 db = {
     1: {
         "id": 1,
