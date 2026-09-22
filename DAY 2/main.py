@@ -5,22 +5,22 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to my FastAPI application!"}
+    return {"message": "Enterprise IT Service Desk-Server"}
 db = {
-    1: {
+       1: {
         "id": 1,
         "title": "Computer is not on",
         "description": "Power button is not working",
         "category": "Hardware",
         "status": "NEW",
-    },
-    2: {
+       },
+       2: {
         "id": 2,
         "title": "internet is not working",
         "description": "wifi problem",
         "category": "Hardware",
         "status": "NEW",
-    },
+        },
 }
 
 
@@ -35,7 +35,7 @@ class TicketResponse(TicketCreate):
     id: int
 
 
-@app.get("/tickets/", response_model=list[TicketResponse])
+@app.get("/tickets/")
 def tickets_read_all():
     return list(db.values())
 
