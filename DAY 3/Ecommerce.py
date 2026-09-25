@@ -48,9 +48,9 @@ def ticket_create(payload: TicketCreate):
 
     ticket_dict = payload.model_dump()
 
-    # System automatically assigns these
-    ticket_dict["status"] = "ASSIGNED"
-    ticket_dict["assigned_to"] = "Janaki"
+    # System automatically  has assigns these
+   # ticket_dict["status"] = "ASSIGNED"
+    #ticket_dict["assigned_to"] = "Support agent "
 
     result = tickets_collection.insert_one(ticket_dict)
 

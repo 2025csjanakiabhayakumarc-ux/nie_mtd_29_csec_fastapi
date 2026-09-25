@@ -1,0 +1,29 @@
+REACT JS
+
+Prerequesites HTML 5/ css / JS
+
+HTML langauge  to define the content of the webpage/web doc
+-
+css to make the HTML Doc content as a look and feel
+
+styles categories
+
+React JS NOde JS based UI/fronted framework
+
+Vite template/starter
+npm create vite@latest my-vue-app -- -- template vue\
+
+package,json node project configuration file
+node project - npm init
+npm install - instal packages
+
+React will take the snapshot of the single page ie DOM
+-it is virtual DOM
+-REACT holds the virtual DOM
+-
+-
+
+When we give  the url  of the React server
+-thr index.html wlil be loade first 
+-main.jsx
+-app,jsx

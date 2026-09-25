@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException, Depends
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 from pymongo import MongoClient
@@ -11,10 +12,19 @@ from datetime import datetime, timedelta, timezone
 
 app = FastAPI()
 
+# CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
+
 # Mongo 
 URL = "mongodb://127.0.0.1:27017"
 client = MongoClient(URL)
-db = client["er_tickets_db"]
+db = client["richest_tickets_db"]
 ticket_collection = db["tickets"]
 user_collection = db["users"]
 
